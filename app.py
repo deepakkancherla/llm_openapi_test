@@ -1,4 +1,4 @@
-import streamlit as st;
+import streamlit as st
 from dotenv import load_dotenv
 import os
 import openai
@@ -12,11 +12,9 @@ client = openai.OpenAI()
 if openai.api_key is None:
     raise ValueError("API key not found! Please set the OPENAI_API_KEY environment variable.")
 
-st.title("nutrition calculator")
+st.title("Nutrition Calculator")
 
-st.markdown("Enter your food details to calculate the protein and carbs content.")
-
-st.subheader("Enter the list of cooked: Vegetables, Meat and Carbs you will be eating in grams for one meal")
+st.markdown("Enter the list of cooked food items you will be eating in grams for one meal to calculate the protein and carbs content.")
 
 veg_input = st.text_area("Cooked Vegetables", value="")
 
